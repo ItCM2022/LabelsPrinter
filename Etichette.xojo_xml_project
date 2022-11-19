@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RBProject version="2021r2.1" FormatVersion="2" MinIDEVersion="20070100">
+  <block type="Project" ID="0">
+    <ProjectSavedInVers>2021.021</ProjectSavedInVers>
+    <IDEVersion>20210201</IDEVersion>
+    <MajorVersion>1</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <SubVersion>0</SubVersion>
+    <Release>0</Release>
+    <NonRelease>0</NonRelease>
+    <Region/>
+    <ShortVersion/>
+    <LongVersion/>
+    <InfoVersion/>
+    <AutoIncVersion>0</AutoIncVersion>
+    <DefaultViewID>1209753599</DefaultViewID>
+    <ProjectType>0</ProjectType>
+    <DefaultLanguage>0</DefaultLanguage>
+    <CurrentLanguage>0</CurrentLanguage>
+    <DefaultEncoding>0</DefaultEncoding>
+    <BuildFlags>18688</BuildFlags>
+    <UseBuildsFolder>1</UseBuildsFolder>
+    <WebApp>0</WebApp>
+    <Icon/>
+    <MacCreator/>
+    <BuildCarbonMachOName>Etichette</BuildCarbonMachOName>
+    <BundleIdentifier>com.cmforever.etichette</BundleIdentifier>
+    <WinMDICaption/>
+    <BuildWinName>Etichette.exe</BuildWinName>
+    <BuildWinMDI>0</BuildWinMDI>
+    <BuildWinCompanyName>CM-Forever</BuildWinCompanyName>
+    <BuildWinProductName/>
+    <BuildWinInternalName/>
+    <BuildWinFileDescription/>
+    <UseGDIPlus>0</UseGDIPlus>
+    <HiDPI>1</HiDPI>
+    <DarkMode>1</DarkMode>
+    <BuildLinuxX86Name>Etichette</BuildLinuxX86Name>
+    <DebuggerCommandLine/>
+    <LinuxArchitecture>1</LinuxArchitecture>
+    <MacArchitecture>4</MacArchitecture>
+    <OptimizationLevel>0</OptimizationLevel>
+    <NormalizeControlSizes>1</NormalizeControlSizes>
+    <CopyWindowsRedist>0</CopyWindowsRedist>
+    <WindowsVersions>{35138b9a-5d96-4fbd-8e2d-a2440225f93a}|{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}|{1f676c76-80e1-4239-95bb-83d0f6d0da78}|{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}</WindowsVersions>
+    <WindowsRunAs>0</WindowsRunAs>
+  </block>
+  <block type="Module" ID="376215551">
+    <ObjName>App</ObjName>
+    <ObjContainerID>0</ObjContainerID>
+    <IsClass>1</IsClass>
+    <Superclass>Application</Superclass>
+    <ItemFlags>1</ItemFlags>
+    <IsInterface>0</IsInterface>
+    <IsApplicationObject>1</IsApplicationObject>
+    <Compatibility/>
+    <PropertyVal Name="MenuBar">1985023999</PropertyVal>
+    <ViewBehavior/>
+    <Constant>
+      <ItemName>kFileQuitShortcut</ItemName>
+      <Compatibility/>
+      <Visible>1</Visible>
+      <PartID>401319935</PartID>
+      <TextEncoding>134217984</TextEncoding>
+      <ItemType>0</ItemType>
+      <ItemDef/>
+      <ItemFlags>0</ItemFlags>
+      <ConstantInstance>
+        <ItemPlatform>1</ItemPlatform>
+        <ItemLanguage>0</ItemLanguage>
+        <ItemDef>Cmd+Q</ItemDef>
+      </ConstantInstance>
+      <ConstantInstance>
+        <ItemPlatform>5</ItemPlatform>
+        <ItemLanguage>0</ItemLanguage>
+        <ItemDef>Ctrl+Q</ItemDef>
+      </ConstantInstance>
+    </Constant>
+    <Constant>
+      <ItemName>kFileQuit</ItemName>
+      <Compatibility/>
+      <Visible>1</Visible>
+      <PartID>2026356735</PartID>
+      <TextEncoding>134217984</TextEncoding>
+      <ItemType>0</ItemType>
+      <ItemDef>&amp;Quit</ItemDef>
+      <ItemFlags>0</ItemFlags>
+      <ConstantInstance>
+        <ItemPlatform>2</ItemPlatform>
+        <ItemLanguage>0</ItemLanguage>
+        <ItemDef>E&amp;xit</ItemDef>
+      </ConstantInstance>
+    </Constant>
+    <Constant>
+      <ItemName>kEditClear</ItemName>
+      <Compatibility/>
+      <Visible>1</Visible>
+      <PartID>2116923391</PartID>
+      <TextEncoding>134217984</TextEncoding>
+      <ItemType>0</ItemType>
+      <ItemDef>&amp;Delete</ItemDef>
+      <ItemFlags>0</ItemFlags>
+      <ConstantInstance>
+        <ItemPlatform>2</ItemPlatform>
+        <ItemLanguage>0</ItemLanguage>
+        <ItemDef>&amp;Delete</ItemDef>
+      </ConstantInstance>
+      <ConstantInstance>
+        <ItemPlatform>5</ItemPlatform>
+        <ItemLanguage>0</ItemLanguage>
+        <ItemDef>&amp;Delete</ItemDef>
+      </ConstantInstance>
+    </Constant>
+  </block>
+  <block type="Window" ID="1209753599">
+    <ObjName>Window1</ObjName>
+    <ObjContainerID>0</ObjContainerID>
+    <IsClass>1</IsClass>
+    <Superclass>Window</Superclass>
+    <ItemFlags>1</ItemFlags>
+    <IsInterface>0</IsInterface>
+    <Compatibility/>
+    <HookInstance>
+      <ItemName>Open</ItemName>
+      <Compatibility/>
+      <Visible>1</Visible>
+      <PartID>1245845503</PartID>
+      <ItemSource>
+        <TextEncoding>134217984</TextEncoding>
+        <SourceLine>Sub Open()</SourceLine>
+        <SourceLine>Window1.Maximize</SourceLine>
+        <SourceLine/>
+        <SourceLine/>
+        <SourceLine>Listbox1.ColumnTypeAt(0) = ListBox.CellTypes.TextField</SourceLine>
+        <SourceLine/>
+        <SourceLine>ListBox1.RemoveAllRows</SourceLine>
+        <SourceLine/>
+        <SourceLine>Dim sql As String</SourceLine>
+        <SourceLine>sql = "SELECT * FROM Etichette"</SourceLine>
+        <SourceLine/>
+        <SourceLine>Dim rs As RecordSet</SourceLine>
+        <SourceLine>rs = etichette.SQLSelect(sql)</SourceLine>
+        <SourceLine/>
+        <SourceLine/>
+        <SourceLine>While Not rs.EOF</SourceLine>
+        <SourceLine>ListBox1.AddRow(rs.Field("IdWorkOrder").StringValue, rs.Field("IDPhase").StringValue, rs.Field("Priority").StringValue, rs.Field("DataInsert").StringValue)</SourceLine>
+        <SourceLine>rs.MoveNext</SourceLine>
+        <SourceLine>Wend</SourceLine>
+        <SourceLine>End Sub</SourceLine>
+      </ItemSource>
+    </HookInstance>
+    <PropertyVal Name="MenuBarVisible">True</PropertyVal>
+    <PropertyVal Name="MenuBar">1985023999</PropertyVal>
+    <PropertyVal Name="Backdrop">0</PropertyVal>
+    <PropertyVal Name="BackgroundColor">16777215</PropertyVal>
+    <PropertyVal Name="HasBackgroundColor">False</PropertyVal>
+    <PropertyVal Name="Visible">True</PropertyVal>
+    <PropertyVal Name="DefaultLocation">0</PropertyVal>
+    <PropertyVal Name="ImplicitInstance">True</PropertyVal>
+    <PropertyVal Name="FullScreen">False</PropertyVal>
+    <PropertyVal Name="MacProcID">0</PropertyVal>
+    <PropertyVal Name="Composite">False</PropertyVal>
+    <PropertyVal Name="Resizeable">True</PropertyVal>
+    <PropertyVal Name="HasFullScreenButton">False</PropertyVal>
+    <PropertyVal Name="HasMinimizeButton">True</PropertyVal>
+    <PropertyVal Name="HasMaximizeButton">True</PropertyVal>
+    <PropertyVal Name="HasCloseButton">True</PropertyVal>
+    <PropertyVal Name="Title">Etichette</PropertyVal>
+    <PropertyVal Name="Type">0</PropertyVal>
+    <PropertyVal Name="MaximumHeight">32000</PropertyVal>
+    <PropertyVal Name="MaximumWidth">32000</PropertyVal>
+    <PropertyVal Name="MinimumHeight">64</PropertyVal>
+    <PropertyVal Name="MinimumWidth">64</PropertyVal>
+    <PropertyVal Name="Height">544</PropertyVal>
+    <PropertyVal Name="Width">978</PropertyVal>
+    <ViewBehavior>
+      <ViewProperty>
+        <ObjName>Name</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>ID</PropertyGroup>
+        <ItemType>String</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Interfaces</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>ID</PropertyGroup>
+        <ItemType>String</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Super</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>ID</PropertyGroup>
+        <ItemType>String</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Width</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Size</PropertyGroup>
+        <PropertyValue>600</PropertyValue>
+        <ItemType>Integer</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Height</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Size</PropertyGroup>
+        <PropertyValue>400</PropertyValue>
+        <ItemType>Integer</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>MinimumWidth</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Size</PropertyGroup>
+        <PropertyValue>64</PropertyValue>
+        <ItemType>Integer</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>MinimumHeight</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Size</PropertyGroup>
+        <PropertyValue>64</PropertyValue>
+        <ItemType>Integer</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>MaximumWidth</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Size</PropertyGroup>
+        <PropertyValue>32000</PropertyValue>
+        <ItemType>Integer</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>MaximumHeight</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Size</PropertyGroup>
+        <PropertyValue>32000</PropertyValue>
+        <ItemType>Integer</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Type</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Frame</PropertyGroup>
+        <PropertyValue>0</PropertyValue>
+        <ItemType>Types</ItemType>
+        <EditorType>Enum</EditorType>
+        <Enumeration>
+          <ItemDef>0 - Document</ItemDef>
+          <ItemDef>1 - Movable Modal</ItemDef>
+          <ItemDef>2 - Modal Dialog</ItemDef>
+          <ItemDef>3 - Floating Window</ItemDef>
+          <ItemDef>4 - Plain Box</ItemDef>
+          <ItemDef>5 - Shadowed Box</ItemDef>
+          <ItemDef>6 - Rounded Window</ItemDef>
+          <ItemDef>7 - Global Floating Window</ItemDef>
+          <ItemDef>8 - Sheet Window</ItemDef>
+          <ItemDef>9 - Metal Window</ItemDef>
+          <ItemDef>11 - Modeless Dialog</ItemDef>
+        </Enumeration>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Title</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Frame</PropertyGroup>
+        <PropertyValue>Untitled</PropertyValue>
+        <ItemType>String</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>HasCloseButton</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Frame</PropertyGroup>
+        <PropertyValue>True</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>HasMaximizeButton</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Frame</PropertyGroup>
+        <PropertyValue>True</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>HasMinimizeButton</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Frame</PropertyGroup>
+        <PropertyValue>True</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>HasFullScreenButton</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Frame</PropertyGroup>
+        <PropertyValue>False</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Resizeable</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Frame</PropertyGroup>
+        <PropertyValue>True</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Composite</ObjName>
+        <PropertyGroup>OS X (Carbon)</PropertyGroup>
+        <PropertyValue>False</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>MacProcID</ObjName>
+        <PropertyGroup>OS X (Carbon)</PropertyGroup>
+        <PropertyValue>0</PropertyValue>
+        <ItemType>Integer</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>FullScreen</ObjName>
+        <PropertyGroup>Behavior</PropertyGroup>
+        <PropertyValue>False</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>ImplicitInstance</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Behavior</PropertyGroup>
+        <PropertyValue>True</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>DefaultLocation</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Behavior</PropertyGroup>
+        <PropertyValue>0</PropertyValue>
+        <ItemType>Locations</ItemType>
+        <EditorType>Enum</EditorType>
+        <Enumeration>
+          <ItemDef>0 - Default</ItemDef>
+          <ItemDef>1 - Parent Window</ItemDef>
+          <ItemDef>2 - Main Screen</ItemDef>
+          <ItemDef>3 - Parent Window Screen</ItemDef>
+          <ItemDef>4 - Stagger</ItemDef>
+        </Enumeration>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Visible</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Behavior</PropertyGroup>
+        <PropertyValue>True</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>HasBackgroundColor</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Background</PropertyGroup>
+        <PropertyValue>False</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>BackgroundColor</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Background</PropertyGroup>
+        <PropertyValue>&amp;hFFFFFF</PropertyValue>
+        <ItemType>Color</ItemType>
+        <EditorType>Color</EditorType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>Backdrop</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Background</PropertyGroup>
+        <ItemType>Picture</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>MenuBar</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Menus</PropertyGroup>
+        <ItemType>MenuBar</ItemType>
+      </ViewProperty>
+      <ViewProperty>
+        <ObjName>MenuBarVisible</ObjName>
+        <Visible>1</Visible>
+        <PropertyGroup>Deprecated</PropertyGroup>
+        <PropertyValue>True</PropertyValue>
+        <ItemType>Boolean</ItemType>
+      </ViewProperty>
+    </ViewBehavior>
+    <ControlBehavior>
+      <Superclass>Listbox</Superclass>
+    </ControlBehavior>
+    <ControlBehavior>
+      <Superclass>Rectangle</Superclass>
+    </ControlBehavior>
+    <ControlBehavior>
+      <Superclass>PushButton</Superclass>
+    </ControlBehavior>
+    <ControlBehavior>
+      <Superclass>PushButton</Superclass>
+    </ControlBehavior>
+    <ControlBehavior>
+      <Superclass>TextField</Superclass>
+    </ControlBehavior>
+    <ControlBehavior>
+      <Superclass>TextField</Superclass>
+    </ControlBehavior>
+    <ControlBehavior>
+      <Superclass>Label</Superclass>
+    </ControlBehavior>
+    <ControlBehavior>
+      <Superclass>Label</Superclass>
+    </ControlBehavior>
+    <ControlBehavior>
+      <Superclass>PushButton</Superclass>
+    </ControlBehavior>
+    <Control>
+      <ControlClass>Listbox</ControlClass>
+      <ItemName>Listbox</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="AllowAutoHideScrollbars">True</PropertyVal>
+      <PropertyVal Name="AllowExpandableRows">False</PropertyVal>
+      <PropertyVal Name="AllowFocusRing">True</PropertyVal>
+      <PropertyVal Name="AllowResizableColumns">False</PropertyVal>
+      <PropertyVal Name="AllowRowDragging">True</PropertyVal>
+      <PropertyVal Name="AllowRowReordering">True</PropertyVal>
+      <PropertyVal Name="Bold">False</PropertyVal>
+      <PropertyVal Name="ColumnCount">9</PropertyVal>
+      <PropertyVal Name="ColumnWidths"/>
+      <PropertyVal Name="DataField"/>
+      <PropertyVal Name="DataSource"/>
+      <PropertyVal Name="DefaultRowHeight">-1</PropertyVal>
+      <PropertyVal Name="DropIndicatorVisible">False</PropertyVal>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FontName">System</PropertyVal>
+      <PropertyVal Name="FontSize">0.0e+</PropertyVal>
+      <PropertyVal Name="FontUnit">0</PropertyVal>
+      <PropertyVal Name="GridLinesHorizontalStyle">2</PropertyVal>
+      <PropertyVal Name="GridLinesVerticalStyle">3</PropertyVal>
+      <PropertyVal Name="HasBorder">True</PropertyVal>
+      <PropertyVal Name="HasHeader">True</PropertyVal>
+      <PropertyVal Name="HasHorizontalScrollbar">False</PropertyVal>
+      <PropertyVal Name="HasVerticalScrollbar">True</PropertyVal>
+      <PropertyVal Name="HeadingIndex">-1</PropertyVal>
+      <PropertyVal Name="Height">512</PropertyVal>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent"/>
+      <PropertyVal Name="InitialValue">
+        <Hex bytes="94">53656C656374094974656D20436F6465097661722E436F6465094465736372697074696F6E09546709436F6C6F757209502E7A7A6120636C69656E7465097174612E09646F766509546F742E4F7264696E617469096D6174657269616C65</Hex>
+      </PropertyVal>
+      <PropertyVal Name="Italic">False</PropertyVal>
+      <PropertyVal Name="Left">0</PropertyVal>
+      <PropertyVal Name="LockBottom">True</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">True</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="Name">Listbox1</PropertyVal>
+      <PropertyVal Name="RequiresSelection">False</PropertyVal>
+      <PropertyVal Name="RowSelectionType">0</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Super">Listbox</PropertyVal>
+      <PropertyVal Name="TabIndex">0</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">32</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Underline">False</PropertyVal>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">978</PropertyVal>
+      <PropertyVal Name="_ScrollOffset">0</PropertyVal>
+      <PropertyVal Name="_ScrollWidth">-1</PropertyVal>
+      <ControlIndex>0</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>147068927</PartID>
+    </Control>
+    <Control>
+      <ControlClass>Rectangle</ControlClass>
+      <ItemName>Rectangle</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="BorderThickness">0.00</PropertyVal>
+      <PropertyVal Name="BottomRightColor">16777215</PropertyVal>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FillColor">10930687</PropertyVal>
+      <PropertyVal Name="Height">32</PropertyVal>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent"/>
+      <PropertyVal Name="Left">0</PropertyVal>
+      <PropertyVal Name="LockBottom">False</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">True</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="Name">Rectangle1</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Super">Rectangle</PropertyVal>
+      <PropertyVal Name="TabIndex">1</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">0</PropertyVal>
+      <PropertyVal Name="TopLeftColor">0</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">940</PropertyVal>
+      <ControlIndex>1</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>1620975615</PartID>
+    </Control>
+    <Control>
+      <ControlClass>PushButton</ControlClass>
+      <ItemName>PushButton</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="Bold">False</PropertyVal>
+      <PropertyVal Name="Cancel">False</PropertyVal>
+      <PropertyVal Name="Caption">STAMPA ETICHETTE</PropertyVal>
+      <PropertyVal Name="Default">True</PropertyVal>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FontName">System</PropertyVal>
+      <PropertyVal Name="FontSize">0.0e+</PropertyVal>
+      <PropertyVal Name="FontUnit">0</PropertyVal>
+      <PropertyVal Name="Height">20</PropertyVal>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent">Rectangle1</PropertyVal>
+      <PropertyVal Name="Italic">False</PropertyVal>
+      <PropertyVal Name="Left">20</PropertyVal>
+      <PropertyVal Name="LockBottom">False</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">False</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="MacButtonStyle">6</PropertyVal>
+      <PropertyVal Name="Name">PushButton1</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Super">PushButton</PropertyVal>
+      <PropertyVal Name="TabIndex">0</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">5</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Underline">False</PropertyVal>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">164</PropertyVal>
+      <ControlIndex>2</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>329394175</PartID>
+    </Control>
+    <Control>
+      <ControlClass>PushButton</ControlClass>
+      <ItemName>PushButton</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="Bold">False</PropertyVal>
+      <PropertyVal Name="Cancel">False</PropertyVal>
+      <PropertyVal Name="Caption">SELEZIONE</PropertyVal>
+      <PropertyVal Name="Default">True</PropertyVal>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FontName">System</PropertyVal>
+      <PropertyVal Name="FontSize">0.0e+</PropertyVal>
+      <PropertyVal Name="FontUnit">0</PropertyVal>
+      <PropertyVal Name="Height">20</PropertyVal>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent">Rectangle1</PropertyVal>
+      <PropertyVal Name="Italic">False</PropertyVal>
+      <PropertyVal Name="Left">196</PropertyVal>
+      <PropertyVal Name="LockBottom">False</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">False</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="MacButtonStyle">6</PropertyVal>
+      <PropertyVal Name="Name">PushButton2</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Super">PushButton</PropertyVal>
+      <PropertyVal Name="TabIndex">1</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">5</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Underline">False</PropertyVal>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">164</PropertyVal>
+      <ControlIndex>3</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>1978595327</PartID>
+    </Control>
+    <Control>
+      <ControlClass>TextField</ControlClass>
+      <ItemName>TextField</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="AllowFocusRing">True</PropertyVal>
+      <PropertyVal Name="AllowSpellChecking">False</PropertyVal>
+      <PropertyVal Name="AllowTabs">False</PropertyVal>
+      <PropertyVal Name="BackgroundColor">16777215</PropertyVal>
+      <PropertyVal Name="Bold">False</PropertyVal>
+      <PropertyVal Name="DataField"/>
+      <PropertyVal Name="DataSource"/>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FontName">System</PropertyVal>
+      <PropertyVal Name="FontSize">0.0e+</PropertyVal>
+      <PropertyVal Name="FontUnit">0</PropertyVal>
+      <PropertyVal Name="Format"/>
+      <PropertyVal Name="HasBorder">True</PropertyVal>
+      <PropertyVal Name="Height">22</PropertyVal>
+      <PropertyVal Name="Hint"/>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent">Rectangle1</PropertyVal>
+      <PropertyVal Name="Italic">False</PropertyVal>
+      <PropertyVal Name="Left">443</PropertyVal>
+      <PropertyVal Name="LockBottom">False</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">False</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+      <PropertyVal Name="Name">TextField1</PropertyVal>
+      <PropertyVal Name="Password">False</PropertyVal>
+      <PropertyVal Name="ReadOnly">False</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Super">TextField</PropertyVal>
+      <PropertyVal Name="TabIndex">2</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Text"/>
+      <PropertyVal Name="TextAlignment">0</PropertyVal>
+      <PropertyVal Name="TextColor">0</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">5</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Underline">False</PropertyVal>
+      <PropertyVal Name="ValidationMask"/>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">80</PropertyVal>
+      <ControlIndex>4</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>646060031</PartID>
+    </Control>
+    <Control>
+      <ControlClass>TextField</ControlClass>
+      <ItemName>TextField</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="AllowFocusRing">True</PropertyVal>
+      <PropertyVal Name="AllowSpellChecking">False</PropertyVal>
+      <PropertyVal Name="AllowTabs">False</PropertyVal>
+      <PropertyVal Name="BackgroundColor">16777215</PropertyVal>
+      <PropertyVal Name="Bold">False</PropertyVal>
+      <PropertyVal Name="DataField"/>
+      <PropertyVal Name="DataSource"/>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FontName">System</PropertyVal>
+      <PropertyVal Name="FontSize">0.0e+</PropertyVal>
+      <PropertyVal Name="FontUnit">0</PropertyVal>
+      <PropertyVal Name="Format"/>
+      <PropertyVal Name="HasBorder">True</PropertyVal>
+      <PropertyVal Name="Height">22</PropertyVal>
+      <PropertyVal Name="Hint"/>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent">Rectangle1</PropertyVal>
+      <PropertyVal Name="Italic">False</PropertyVal>
+      <PropertyVal Name="Left">582</PropertyVal>
+      <PropertyVal Name="LockBottom">False</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">False</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="MaximumCharactersAllowed">0</PropertyVal>
+      <PropertyVal Name="Name">TextField2</PropertyVal>
+      <PropertyVal Name="Password">False</PropertyVal>
+      <PropertyVal Name="ReadOnly">False</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Super">TextField</PropertyVal>
+      <PropertyVal Name="TabIndex">3</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Text"/>
+      <PropertyVal Name="TextAlignment">0</PropertyVal>
+      <PropertyVal Name="TextColor">0</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">5</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Underline">False</PropertyVal>
+      <PropertyVal Name="ValidationMask"/>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">80</PropertyVal>
+      <ControlIndex>5</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>55441407</PartID>
+    </Control>
+    <Control>
+      <ControlClass>Label</ControlClass>
+      <ItemName>Label</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="Bold">False</PropertyVal>
+      <PropertyVal Name="DataField"/>
+      <PropertyVal Name="DataSource"/>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FontName">System</PropertyVal>
+      <PropertyVal Name="FontSize">0.0e+</PropertyVal>
+      <PropertyVal Name="FontUnit">0</PropertyVal>
+      <PropertyVal Name="Height">20</PropertyVal>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent">Rectangle1</PropertyVal>
+      <PropertyVal Name="Italic">False</PropertyVal>
+      <PropertyVal Name="Left">414</PropertyVal>
+      <PropertyVal Name="LockBottom">False</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">False</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="Multiline">False</PropertyVal>
+      <PropertyVal Name="Name">Label1</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Selectable">False</PropertyVal>
+      <PropertyVal Name="Super">Label</PropertyVal>
+      <PropertyVal Name="TabIndex">4</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Text">Top</PropertyVal>
+      <PropertyVal Name="TextAlignment">0</PropertyVal>
+      <PropertyVal Name="TextColor">0</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">5</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Underline">False</PropertyVal>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">28</PropertyVal>
+      <ControlIndex>6</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>1505325055</PartID>
+    </Control>
+    <Control>
+      <ControlClass>Label</ControlClass>
+      <ItemName>Label</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="Bold">False</PropertyVal>
+      <PropertyVal Name="DataField"/>
+      <PropertyVal Name="DataSource"/>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FontName">System</PropertyVal>
+      <PropertyVal Name="FontSize">0.0e+</PropertyVal>
+      <PropertyVal Name="FontUnit">0</PropertyVal>
+      <PropertyVal Name="Height">20</PropertyVal>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent">Rectangle1</PropertyVal>
+      <PropertyVal Name="Italic">False</PropertyVal>
+      <PropertyVal Name="Left">550</PropertyVal>
+      <PropertyVal Name="LockBottom">False</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">False</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="Multiline">False</PropertyVal>
+      <PropertyVal Name="Name">Label2</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Selectable">False</PropertyVal>
+      <PropertyVal Name="Super">Label</PropertyVal>
+      <PropertyVal Name="TabIndex">5</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Text">Left</PropertyVal>
+      <PropertyVal Name="TextAlignment">0</PropertyVal>
+      <PropertyVal Name="TextColor">0</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">5</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Underline">False</PropertyVal>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">28</PropertyVal>
+      <ControlIndex>7</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>328978431</PartID>
+    </Control>
+    <Control>
+      <ControlClass>PushButton</ControlClass>
+      <ItemName>PushButton</ItemName>
+      <PropertyVal Name="AllowAutoDeactivate">True</PropertyVal>
+      <PropertyVal Name="Bold">False</PropertyVal>
+      <PropertyVal Name="Cancel">False</PropertyVal>
+      <PropertyVal Name="Caption">STAMPA</PropertyVal>
+      <PropertyVal Name="Default">True</PropertyVal>
+      <PropertyVal Name="Enabled">True</PropertyVal>
+      <PropertyVal Name="FontName">System</PropertyVal>
+      <PropertyVal Name="FontSize">0.0e+</PropertyVal>
+      <PropertyVal Name="FontUnit">0</PropertyVal>
+      <PropertyVal Name="Height">20</PropertyVal>
+      <PropertyVal Name="Index">-2147483648</PropertyVal>
+      <PropertyVal Name="InitialParent">Rectangle1</PropertyVal>
+      <PropertyVal Name="Italic">False</PropertyVal>
+      <PropertyVal Name="Left">794</PropertyVal>
+      <PropertyVal Name="LockBottom">False</PropertyVal>
+      <PropertyVal Name="LockLeft">True</PropertyVal>
+      <PropertyVal Name="LockRight">False</PropertyVal>
+      <PropertyVal Name="LockTop">True</PropertyVal>
+      <PropertyVal Name="MacButtonStyle">6</PropertyVal>
+      <PropertyVal Name="Name">PushButton3</PropertyVal>
+      <PropertyVal Name="Scope">0</PropertyVal>
+      <PropertyVal Name="Super">PushButton</PropertyVal>
+      <PropertyVal Name="TabIndex">6</PropertyVal>
+      <PropertyVal Name="TabPanelIndex">0</PropertyVal>
+      <PropertyVal Name="TabStop">True</PropertyVal>
+      <PropertyVal Name="Tooltip"/>
+      <PropertyVal Name="Top">5</PropertyVal>
+      <PropertyVal Name="Transparent">False</PropertyVal>
+      <PropertyVal Name="Underline">False</PropertyVal>
+      <PropertyVal Name="Visible">True</PropertyVal>
+      <PropertyVal Name="Width">164</PropertyVal>
+      <ControlIndex>8</ControlIndex>
+      <Locked>0</Locked>
+      <PartID>348153855</PartID>
+    </Control>
+  </block>
+  <block type="Menu" ID="1985023999">
+    <ObjName>MainMenuBar</ObjName>
+    <ObjContainerID>0</ObjContainerID>
+    <MenuItem>
+      <ItemSpecialMenu>0</ItemSpecialMenu>
+      <ItemName>FileMenu</ItemName>
+      <ItemText>&amp;File</ItemText>
+      <ItemIndex>-2147483648</ItemIndex>
+      <ItemShortcut/>
+      <MenuAutoEnable>1</MenuAutoEnable>
+      <TextEncoding>134217984</TextEncoding>
+      <MenuItemVisible>1</MenuItemVisible>
+      <ItemFlags>0</ItemFlags>
+      <Superclass>MenuItem</Superclass>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>FileQuit</ItemName>
+        <ItemText>#App.kFileQuit</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut>#App.kFileQuitShortcut</ItemShortcut>
+        <MenuShortcut>#App.kFileQuitShortcut</MenuShortcut>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>QuitMenuItem</Superclass>
+      </MenuItem>
+    </MenuItem>
+    <MenuItem>
+      <ItemSpecialMenu>0</ItemSpecialMenu>
+      <ItemName>EditMenu</ItemName>
+      <ItemText>&amp;Edit</ItemText>
+      <ItemIndex>-2147483648</ItemIndex>
+      <ItemShortcut/>
+      <MenuAutoEnable>1</MenuAutoEnable>
+      <TextEncoding>134217984</TextEncoding>
+      <MenuItemVisible>1</MenuItemVisible>
+      <ItemFlags>0</ItemFlags>
+      <Superclass>MenuItem</Superclass>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>EditUndo</ItemName>
+        <ItemText>&amp;Undo</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut>Cmd+Z</ItemShortcut>
+        <MenuShortcut>Z</MenuShortcut>
+        <MenuShortcutModifier>1</MenuShortcutModifier>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>MenuItem</Superclass>
+      </MenuItem>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>EditSeparator1</ItemName>
+        <ItemText>-</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut/>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>MenuItem</Superclass>
+      </MenuItem>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>EditCut</ItemName>
+        <ItemText>Cu&amp;t</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut>Cmd+X</ItemShortcut>
+        <MenuShortcut>X</MenuShortcut>
+        <MenuShortcutModifier>1</MenuShortcutModifier>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>MenuItem</Superclass>
+      </MenuItem>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>EditCopy</ItemName>
+        <ItemText>&amp;Copy</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut>Cmd+C</ItemShortcut>
+        <MenuShortcut>C</MenuShortcut>
+        <MenuShortcutModifier>1</MenuShortcutModifier>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>MenuItem</Superclass>
+      </MenuItem>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>EditPaste</ItemName>
+        <ItemText>&amp;Paste</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut>Cmd+V</ItemShortcut>
+        <MenuShortcut>V</MenuShortcut>
+        <MenuShortcutModifier>1</MenuShortcutModifier>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>MenuItem</Superclass>
+      </MenuItem>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>EditClear</ItemName>
+        <ItemText>#App.kEditClear</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut/>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>MenuItem</Superclass>
+      </MenuItem>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>EditSeparator2</ItemName>
+        <ItemText>-</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut/>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>MenuItem</Superclass>
+      </MenuItem>
+      <MenuItem>
+        <ItemSpecialMenu>0</ItemSpecialMenu>
+        <ItemName>EditSelectAll</ItemName>
+        <ItemText>Select &amp;All</ItemText>
+        <ItemIndex>-2147483648</ItemIndex>
+        <ItemShortcut>Cmd+A</ItemShortcut>
+        <MenuShortcut>A</MenuShortcut>
+        <MenuShortcutModifier>1</MenuShortcutModifier>
+        <MenuAutoEnable>1</MenuAutoEnable>
+        <TextEncoding>134217984</TextEncoding>
+        <MenuItemVisible>1</MenuItemVisible>
+        <ItemFlags>0</ItemFlags>
+        <Superclass>MenuItem</Superclass>
+      </MenuItem>
+    </MenuItem>
+  </block>
+  <block type="BuildAutomation" ID="258883583">
+    <ObjName>Build Automation</ObjName>
+    <ObjContainerID>0</ObjContainerID>
+  </block>
+  <block type="BuildStepsList" ID="1076699135">
+    <ObjName>Linux</ObjName>
+    <ObjContainerID>258883583</ObjContainerID>
+  </block>
+  <block type="BuildProjectStep" ID="2069266431">
+    <ObjName>Build</ObjName>
+    <ObjContainerID>1076699135</ObjContainerID>
+  </block>
+  <block type="BuildStepsList" ID="1437079551">
+    <ObjName>Mac OS X</ObjName>
+    <ObjContainerID>258883583</ObjContainerID>
+  </block>
+  <block type="BuildProjectStep" ID="1375027199">
+    <ObjName>Build</ObjName>
+    <ObjContainerID>1437079551</ObjContainerID>
+  </block>
+  <block type="BuildStepsList" ID="1860225023">
+    <ObjName>Windows</ObjName>
+    <ObjContainerID>258883583</ObjContainerID>
+  </block>
+  <block type="BuildProjectStep" ID="1816672255">
+    <ObjName>Build</ObjName>
+    <ObjContainerID>1860225023</ObjContainerID>
+  </block>
+  <block type="Database" ID="977991679">
+    <ObjName>etichette</ObjName>
+    <ObjContainerID>0</ObjContainerID>
+    <ItemType>sqlite</ItemType>
+    <ItemData>
+      <Hex bytes="160">0000000366696C656E616D653D65746963686574746525324573716C6974650A75726C706174683D66696C653A2F2F2F55736572732F76696765722F446F63756D656E74732F6574696368657474652E73716C6974650A72656C6174697665706174683D253245253245253543253245253245253543446F63756D656E747325354365746963686574746525324573716C6974650A6372656174653D74727565</Hex>
+    </ItemData>
+  </block>
+  <block type="UIState" ID="0">
+    <StudioWindowState>
+      <EditBounds>
+        <Rect left="0" top="25" width="1680" height="1025"/>
+      </EditBounds>
+      <WindowMaximized>0</WindowMaximized>
+      <Editors>
+        <EditorCount>1</EditorCount>
+        <Editor>
+          <EditorIndex>0</EditorIndex>
+          <EditorLocation>etichette</EditorLocation>
+          <EditorPath/>
+          <EditingPartID>977991679</EditingPartID>
+          <EditorPath/>
+        </Editor>
+        <SelectedTab>0</SelectedTab>
+      </Editors>
+    </StudioWindowState>
+  </block>
+</RBProject>
